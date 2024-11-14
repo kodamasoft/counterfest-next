@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 let locales = ['en', 'jp']
  
 // Get the preferred locale, similar to the above or using a library
-function getLocale(request) {
+function getLocale() {
   return 'en'
 }
  

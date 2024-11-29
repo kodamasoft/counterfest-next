@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import { Header } from "@/components/public/Header";
+import { SanityLive } from "@/sanity/lib/live";
+import { DisableDraftMode } from "@/components/DisableDraftMode";
+import { VisualEditing } from "next-sanity";
+import { draftMode } from "next/headers";
+import "../globals.css";
 
 
 export const metadata: Metadata = {
@@ -21,17 +26,23 @@ export const metadata: Metadata = {
       },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`antialiased bg-white text-black dark:bg-black dark:text-white`}
-            >
+            <body className="antialiased bg-white text-black dark:bg-black dark:text-white">
+                <Header key="header" />
                 {children}
+                <SanityLive />
+                {(await draftMode()).isEnabled && (
+                    <>
+                    <DisableDraftMode />
+                    <VisualEditing />
+                    </>
+                )}
             </body>
         </html>
     );

@@ -68,75 +68,6 @@ export type Geopoint = {
     alt?: number;
 };
 
-export type Project = {
-    _id: string;
-    _type: "project";
-    _createdAt: string;
-    _updatedAt: string;
-    _rev: string;
-    title?: string;
-    slug?: Slug;
-    author?: {
-        _ref: string;
-        _type: "reference";
-        _weak?: boolean;
-        [internalGroqTypeReferenceTo]?: "author";
-    };
-    mainImage?: {
-        asset?: {
-            _ref: string;
-            _type: "reference";
-            _weak?: boolean;
-            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-        };
-        hotspot?: SanityImageHotspot;
-        crop?: SanityImageCrop;
-        alt?: string;
-        _type: "image";
-    };
-    categories?: Array<{
-        _ref: string;
-        _type: "reference";
-        _weak?: boolean;
-        _key: string;
-        [internalGroqTypeReferenceTo]?: "category";
-    }>;
-    publishedAt?: string;
-    body?: Array<
-        | {
-              children?: Array<{
-                  marks?: Array<string>;
-                  text?: string;
-                  _type: "span";
-                  _key: string;
-              }>;
-              style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
-              listItem?: "bullet";
-              markDefs?: Array<{
-                  href?: string;
-                  _type: "link";
-                  _key: string;
-              }>;
-              level?: number;
-              _type: "block";
-              _key: string;
-          }
-        | {
-              asset?: {
-                  _ref: string;
-                  _type: "reference";
-                  _weak?: boolean;
-                  [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-              };
-              hotspot?: SanityImageHotspot;
-              crop?: SanityImageCrop;
-              alt?: string;
-              _type: "image";
-              _key: string;
-          }
-    >;
-};
-
 export type Author = {
     _id: string;
     _type: "author";
@@ -174,6 +105,61 @@ export type Author = {
         _type: "block";
         _key: string;
     }>;
+};
+
+export type Project = {
+    _id: string;
+    _type: "project";
+    _createdAt: string;
+    _updatedAt: string;
+    _rev: string;
+    title?: string;
+    slug?: Slug;
+    themes?: string;
+    status?: "accepting" | "about-to-release" | "completed" | "cancelled";
+    percentage?: number;
+    duration?: string;
+    finished_tracks?: number;
+    deadline?: string;
+    mastering?: {
+        status?: "pending" | "in-progress" | "finished";
+        engineer?: string;
+    };
+    artwork_comission?: "pending" | "sketching" | "finished";
+    color?: string;
+    body?: Array<
+        | {
+              children?: Array<{
+                  marks?: Array<string>;
+                  text?: string;
+                  _type: "span";
+                  _key: string;
+              }>;
+              style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
+              listItem?: "bullet";
+              markDefs?: Array<{
+                  href?: string;
+                  _type: "link";
+                  _key: string;
+              }>;
+              level?: number;
+              _type: "block";
+              _key: string;
+          }
+        | {
+              asset?: {
+                  _ref: string;
+                  _type: "reference";
+                  _weak?: boolean;
+                  [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+              };
+              hotspot?: SanityImageHotspot;
+              crop?: SanityImageCrop;
+              alt?: string;
+              _type: "image";
+              _key: string;
+          }
+    >;
 };
 
 export type Category = {
@@ -290,8 +276,8 @@ export type AllSanitySchemaTypes =
     | SanityImageDimensions
     | SanityFileAsset
     | Geopoint
-    | Project
     | Author
+    | Project
     | Category
     | Slug
     | BlockContent
@@ -346,18 +332,7 @@ export type PROJECT_QUERYResult = {
               _key: string;
           }
     > | null;
-    mainImage: {
-        asset?: {
-            _ref: string;
-            _type: "reference";
-            _weak?: boolean;
-            [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
-        };
-        hotspot?: SanityImageHotspot;
-        crop?: SanityImageCrop;
-        alt?: string;
-        _type: "image";
-    } | null;
+    mainImage: null;
 } | null;
 
 // Query TypeMap

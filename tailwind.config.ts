@@ -9,6 +9,14 @@ export default {
     ],
     plugins: [
         typography,
+        // @ts-expect-error - addUtilities is not defined in the types
+        function({ addUtilities }) {
+            addUtilities({
+                '.clip-notched': {
+                    'clip-path': 'polygon(0% var(--notchSize, 20px), var(--notchSize, 20px) 0%, calc(100% - var(--notchSize, 20px)) 0%, 100% var(--notchSize, 20px), 100% calc(100% - var(--notchSize, 20px)), calc(100% - var(--notchSize, 20px)) 100%, var(--notchSize, 20px) 100%, 0% calc(100% - var(--notchSize, 20px)))'
+                }
+            }, ['responsive']);
+        }
     ],
     theme: {
         extend: {        
@@ -26,6 +34,9 @@ export default {
                         transform: "translateY(0)"
                     }
                 }
+            },
+            clipPath: {
+                'notched': 'polygon(0% var(--notchSize, 20px), var(--notchSize, 20px) 0%, calc(100% - var(--notchSize, 20px)) 0%, 100% var(--notchSize, 20px), 100% calc(100% - var(--notchSize, 20px)), calc(100% - var(--notchSize, 20px)) 100%, var(--notchSize, 20px) 100%, 0% calc(100% - var(--notchSize, 20px)))'
             }
         },
     },

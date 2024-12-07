@@ -31,13 +31,13 @@ export default async function RootLayout({
     params
 }: Readonly<{
     children: React.ReactNode;
-    params: Promise<{ lang: string }>
+    params: Promise<{ locale: string }>
 }>) {
 
-    const { lang } = await params;
+    const { locale } = await params;
 
     return (
-        <html lang={lang}>
+        <html lang={locale}>
             <body className="antialiased bg-white text-black dark:bg-black dark:text-white">
                 <Header key="header" />
                 {children}

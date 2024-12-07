@@ -28,11 +28,16 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
     children,
+    params
 }: Readonly<{
     children: React.ReactNode;
+    params: Promise<{ lang: string }>
 }>) {
+
+    const { lang } = await params;
+
     return (
-        <html lang="en">
+        <html lang={lang}>
             <body className="antialiased bg-white text-black dark:bg-black dark:text-white">
                 <Header key="header" />
                 {children}

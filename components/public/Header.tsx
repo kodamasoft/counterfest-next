@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from "next/image";
+import LocaleSwitcher from './LocaleSwitcher';
 
 export function Header() {
     return (
@@ -11,10 +12,14 @@ export function Header() {
             <nav className="bg-orange-500 w-full">
                 <ul className="flex flex-col sm:flex-row justify-center p-4 gap-4 items-center">
                     <li>
-                        <Link href="/projects" className="text-white hover:bg-orange-700/50 px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-orange-600 focus-visible:outline-none transition">
+                        <Link href="/projects" className="text-white hover:bg-orange-700/50 px-6 py-3 clip-notched text-sm font-medium border-2 border-transparent focus-visible:border-orange-600 focus-visible:outline-none transition">
                             Projects
                         </Link>
                     </li>
+                    <li>
+                        <LocaleSwitcher />
+                    </li>
+
                 </ul>
             </nav>
         </header>

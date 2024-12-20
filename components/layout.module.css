@@ -1,0 +1,7 @@
+.main_container {
+	@apply bg-gradient-to-br from-[#0e122d] via-[#131530] to-[#20203f] bg-no-repeat bg-cover bg-center bg-fixed;
+}
+
+.main {
+	@apply text-black dark:text-white min-h-screen ;
+} 

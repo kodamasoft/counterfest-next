@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import layoutStyles from "@/components/layout.module.css";
+import Footer from "@/components/footer";
 
 
 export const metadata: Metadata = {
@@ -20,7 +22,12 @@ export default async function RootLayout({
             <body
                 className={`antialiased bg-white text-black dark:bg-black dark:text-white`}
             >
-                {children}
+                <div className={layoutStyles.main_container}>
+                    <div className={layoutStyles.main + " " + " min-h-screen"}>
+                        <main>{children}</main>
+                        <Footer />
+                    </div>
+                </div>
             </body>
         </html>
     );

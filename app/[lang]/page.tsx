@@ -4,6 +4,17 @@ import logo from '@/public/img/Logo_Orange_Transparent.png'
 import logoDark from '@/public/img/Logo_DarkOrange_Transparent.png'
 import { getDictionary } from './dictionaries'
 
+import Layout from '@/components/layout'
+import Head from 'next/head'
+import Container from '@/components/container'
+import Header from '@/components/header'
+import ProseContainer from '@/components/prose-container'
+import MoreStories from '@/components/more-stories'
+import Link from 'next/link'
+
+import { getAllPosts } from '@/lib/api'
+import { WEBSITE_NAME } from '@/lib/constants'
+
 export default async function Home({params}) {
     const { lang } = await params;
     const dict = await getDictionary(lang);

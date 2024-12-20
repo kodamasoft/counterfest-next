@@ -1,7 +1,6 @@
 
 import { FaBandcamp, FaSoundcloud, FaYoutube, FaTwitter, FaDiscord, FaEnvelope } from 'react-icons/fa';
-import BoothSVG from '../public/assets/icons/booth.svg';
-import BskySVG from '../public/assets/icons/bsky.svg';
+//import BskySVG from '../public/assets/icons/bsky.svg';
 
 import Link from 'next/link';
 
@@ -12,12 +11,11 @@ const iconClass = 'text-slate-500 no-underline hover:text-slate-50 hover:scale-1
 const iconLinks = [
   { href: 'mailto:kodamasoft@example.com', icon: FaEnvelope },
   { href: 'https://discord.gg/NEnrfX6e', icon: FaDiscord },
-  { href: 'https://twitter.com/kodamasoft', icon: FaTwitter },
-  { href: 'https://bsky.app/profile/kodamasoft.bsky.social', icon: BskySVG },
-  { href: 'https://www.youtube.com/@kodamasoft', icon: FaYoutube },
-  { href: 'https://soundcloud.com/kodamasoft', icon: FaSoundcloud },
-  { href: 'https://bandcamp.com/kodamasounds', icon: FaBandcamp },
-  { href: 'https://kodamasoft.booth.pm/', icon: BoothSVG },
+  { href: 'https://twitter.com/counterfest', icon: FaTwitter },
+  //{ href: 'https://bsky.app/profile/kodamasoft.bsky.social', icon: BskySVG },
+  { href: 'https://www.youtube.com/@COUNTERFESTRECORDS', icon: FaYoutube },
+  { href: 'https://soundcloud.com/counterfest-records', icon: FaSoundcloud },
+  { href: 'https://counterfestrecords.bandcamp.com', icon: FaBandcamp }
 ];
 
 export default function Footer() {
@@ -26,13 +24,14 @@ export default function Footer() {
       <div className="container max-w-4xl mx-auto flex py-8 flex-col text-center">
         <div className="w-full mx-auto flex justify-center flex-wrap items-center gap-3">
           {iconLinks.map(({ href, icon: IconComponent }, index) => (
+            console.log(IconComponent),
             <Link key={index} href={href} className="footer_svg_container outline-none">
               <IconComponent className={iconClass} />
             </Link>
           ))}
         </div>
         <p className="text-slate-500 mt-5">
-          KodamaSoft / KodamaSounds logo by <a href="https://twitter.com/vgmcal" className="text-slate-500 transition hover:text-slate-50 hover:underline">cal</a> — Kodama Mascots by Garrrros (KodamaSoft) — Website by <a href="https://twitter.com/krz0001" className="text-slate-500 transition hover:text-slate-50 hover:underline">krz</a> (KodamaSoft) <br />
+          Counterfest logo by <a href="https://twitter.com/ZethZ161" className="text-slate-500 transition hover:text-slate-50 hover:underline">Zeth</a> — Kodama Mascots by Garrrros (KodamaSoft) — Website by <a href="https://twitter.com/krz0001" className="text-slate-500 transition hover:text-slate-50 hover:underline">krz</a> and <a href="https://twitter.com/jubstacheit" className="text-slate-500 transition hover:text-slate-50 hover:underline">Bonnie</a> (KodamaSoft) <br />
         </p>
       </div>
     </footer>

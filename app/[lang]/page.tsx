@@ -4,8 +4,6 @@ import logo from '@/public/img/Logo_Orange_Transparent.png'
 import logoDark from '@/public/img/Logo_DarkOrange_Transparent.png'
 import { getDictionary } from './dictionaries'
 
-import Layout from '@/components/layout'
-import Head from 'next/head'
 import Container from '@/components/container'
 import Header from '@/components/header'
 import ProseContainer from '@/components/prose-container'

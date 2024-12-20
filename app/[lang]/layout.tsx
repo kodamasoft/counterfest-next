@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     description: "COUNTERFEST RECORDS is the Bootleg Sub-Label for KodamaSounds, offering free albums and artistic freedom for unique and experimental music projects. Join us for a more leftfield environment and support for all kinds of music and counter cultures.",
 };
 
+
 export default async function RootLayout({
     children,
     params

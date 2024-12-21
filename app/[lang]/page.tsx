@@ -1,7 +1,4 @@
-import Image from "next/image";
 import IndexMDX from '@/markdown/index.mdx'
-import logo from '@/public/img/Logo_Orange_Transparent.png'
-import logoDark from '@/public/img/Logo_DarkOrange_Transparent.png'
 import { getDictionary } from './dictionaries'
 
 import Container from '@/components/container'

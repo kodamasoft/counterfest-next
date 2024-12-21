@@ -1,35 +1,36 @@
 import { WEBSITE_NAME } from '../lib/constants'
-import LocaleSwitcher from './locale-switcher'
+//import LocaleSwitcher from './locale-switcher'
 import headerStyles from './header.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
-import logo from '../public/assets/logo_white.png'
-import useTranslation from 'next-translate/useTranslation'
+import logo from '@/public/img/Logo_DarkOrange_Transparent.png'
+import { getDictionary } from '@/app/[lang]/dictionaries'
 import { Disclosure, Transition } from '@headlessui/react'
 
 
-export default function Header() {
-	const { t, lang } = useTranslation();
+export default async function Header({params}) {
+	const { lang } = await params;
+    const dict = await getDictionary(lang);
 
 	let links = [
 		{ href: '/', label: 'Home' },
-		{ href: '/kodamasoft', label: 'KodamaSoft' },
 		{ href: '/discography', label: 'Discography' },
 		{ href: '/projects', label: 'Projects' },
 		{ href: '/staff', label: 'Staff' },
+		{ href: 'https://kodamasoft.net', label: 'KodamaSoft' },
 		// { href: '/blog', label: 'Blog' }
 	];
 
 	let canDisplayBanner = new Date().getMonth() <= 3 && new Date().getFullYear() === 2024;
 
 	return (
-		<header className="relative w-100 h-auto text-white text-center flex flex-col select-none bg-[url('/assets/big_01_space_g.png')] bg-center bg-cover">
+		<header className="relative w-100 h-auto text-white text-center flex flex-col select-none bg-center bg-cover">
 
 			{
 				canDisplayBanner &&
 				<Link className="bg-purple-900 text-white p-2" href="/posts/kodamadirect-2024">
 					<p className="text-sm">
-						{t('common:kodamadirect2024_banner')}
+						{/*t('common:kodamadirect2024_banner')*/}
 					</p>
 					<button id="close" className="absolute top-0 right-0 p-2 text-white" onClick={() => document.getElementById('close').parentElement.style.display = 'none'} />
 				</Link>
@@ -42,7 +43,7 @@ export default function Header() {
 			</h1>
 
 			{/* MOBILE NAVBAR */}
-			<Disclosure as="nav" className="bg-purple-900/30 backdrop-blur text-white sm:hidden">
+			{/*<Disclosure as="nav" className="bg-purple-900/30 backdrop-blur text-white sm:hidden">
 				{({ open }) => (
 					<>
 						<Disclosure.Button>
@@ -74,13 +75,13 @@ export default function Header() {
 										</Link>
 									))}
 
-									<LocaleSwitcher className="w-fit m-0 text-gray-300 bg-gray-900/50 hover:bg-purple-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition"></LocaleSwitcher>
-								</div>
+									{/*<LocaleSwitcher className="w-fit m-0 text-gray-300 bg-gray-900/50 hover:bg-purple-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition"></LocaleSwitcher>*/}
+								{/*</div>
 							</Disclosure.Panel>
 						</Transition>
 					</>
 				)}
-			</Disclosure>
+			</Disclosure>*/}
 
 
 			{/* DESKTOP NAVBAR */}
@@ -93,7 +94,7 @@ export default function Header() {
 						</Link>
 					))}
 
-					<LocaleSwitcher className="w-fit m-0 text-gray-300 bg-gray-900/50 hover:bg-purple-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition"></LocaleSwitcher>
+					{/*<LocaleSwitcher className="w-fit m-0 text-gray-300 bg-gray-900/50 hover:bg-purple-700/50 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition"></LocaleSwitcher>*/}
 				</div>
 			</nav>
 		</header>

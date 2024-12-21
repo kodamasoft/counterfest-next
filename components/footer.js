@@ -24,7 +24,6 @@ export default function Footer() {
       <div className="container max-w-4xl mx-auto flex py-8 flex-col text-center">
         <div className="w-full mx-auto flex justify-center flex-wrap items-center gap-3">
           {iconLinks.map(({ href, icon: IconComponent }, index) => (
-            console.log(IconComponent),
             <Link key={index} href={href} className="footer_svg_container outline-none">
               <IconComponent className={iconClass} />
             </Link>

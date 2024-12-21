@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import layoutStyles from "@/components/layout.module.css";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 
 export const metadata: Metadata = {
@@ -25,7 +26,10 @@ export default async function RootLayout({
             >
                 <div className={layoutStyles.main_container}>
                     <div className={layoutStyles.main + " " + " min-h-screen"}>
-                        <main>{children}</main>
+                        <Header params={params} />
+                        <main>
+                            {children}
+                        </main>
                         <Footer />
                     </div>
                 </div>

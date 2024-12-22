@@ -1,13 +1,6 @@
 import IndexMDX from '@/markdown/index.mdx'
 import { getDictionary } from './dictionaries'
 
-import Container from '@/components/container'
-import ProseContainer from '@/components/prose-container'
-import MoreStories from '@/components/more-stories'
-import Link from 'next/link'
-
-import { getAllPosts } from '@/lib/api'
-
 export default async function Home({params}) {
     const { lang } = await params;
     const dict = await getDictionary(lang);

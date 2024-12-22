@@ -10,10 +10,10 @@ import MobileNav from './MobileNav'
 export default async function Header({params}) {
 	const { lang } = await params;
 	let links = [
-		{ href: '/', label: 'Home' },
-		{ href: '/discography', label: 'Discography' },
-		{ href: '/projects', label: 'Projects' },
-		{ href: '/staff', label: 'Staff' },
+		{ href: `/${lang}/`, label: 'Home' },
+		{ href: `/${lang}/discography`, label: 'Discography' },
+		{ href: `/${lang}/projects`, label: 'Projects' },
+		{ href: `/${lang}/staff`, label: 'Staff' },
 		{ href: 'https://kodamasoft.net', label: 'KodamaSoft' },
 		// { href: '/blog', label: 'Blog' }
 	];

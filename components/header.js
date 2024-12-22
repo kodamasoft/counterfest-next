@@ -18,21 +18,8 @@ export default async function Header({params}) {
 		// { href: '/blog', label: 'Blog' }
 	];
 
-	//KodamaDirect 2024 banner
-	/*let canDisplayBanner = new Date().getMonth() <= 3 && new Date().getFullYear() === 2024;*/
-
 	return (
 		<header className="relative w-100 h-auto text-white text-center flex flex-col select-none bg-center bg-cover">
-
-			{/*
-				canDisplayBanner &&
-				<Link className="bg-purple-900 text-white p-2" href="/posts/kodamadirect-2024">
-					<p className="text-sm">
-						{/*t('common:kodamadirect2024_banner')*/}
-					{/*</p>
-					<button id="close" className="absolute top-0 right-0 p-2 text-white" onClick={() => document.getElementById('close').parentElement.style.display = 'none'} />
-				</Link>
-			*/}
 
 			<h1 className={headerStyles.header_title}>
 				<Link href="/" className="cursor-pointer">

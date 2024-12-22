@@ -9,7 +9,6 @@ import MobileNav from './MobileNav'
 
 export default async function Header({params}) {
 	const { lang } = await params;
-
 	let links = [
 		{ href: '/', label: 'Home' },
 		{ href: '/discography', label: 'Discography' },

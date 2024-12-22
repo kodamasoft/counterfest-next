@@ -1,7 +1,8 @@
 
 import { FaBandcamp, FaSoundcloud, FaYoutube, FaTwitter, FaDiscord, FaEnvelope } from 'react-icons/fa';
-//import BskySVG from '../public/assets/icons/bsky.svg';
+import BskyPNG from '../public/assets/icons/bsky.png';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 // Define common icon class for reuse
@@ -12,7 +13,7 @@ const iconLinks = [
   { href: 'mailto:kodamasoft@example.com', icon: FaEnvelope },
   { href: 'https://discord.gg/NEnrfX6e', icon: FaDiscord },
   { href: 'https://twitter.com/counterfest', icon: FaTwitter },
-  //{ href: 'https://bsky.app/profile/kodamasoft.bsky.social', icon: BskySVG },
+  { href: 'https://bsky.app/profile/counterfestrecords.bsky.social', icon: () => <Image width={20} height={20} className={`${iconClass} hover:brightness-0 hover:invert`} src={BskyPNG.src} alt="Bsky Logo" /> },
   { href: 'https://www.youtube.com/@COUNTERFESTRECORDS', icon: FaYoutube },
   { href: 'https://soundcloud.com/counterfest-records', icon: FaSoundcloud },
   { href: 'https://counterfestrecords.bandcamp.com', icon: FaBandcamp }

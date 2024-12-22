@@ -37,7 +37,7 @@ export default async function Header({params}) {
 
 			<h1 className={headerStyles.header_title}>
 				<Link href="/" className="cursor-pointer">
-					<Image src={logo} alt={WEBSITE_NAME} height={250} className="cursor-pointer mx-auto max-w-full drop-shadow" />
+					<Image src={logo} alt={WEBSITE_NAME} height={220} className="cursor-pointer mx-auto max-w-full drop-shadow" />
 				</Link>
 			</h1>
 

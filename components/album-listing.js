@@ -1,8 +1,6 @@
-import { FaBandcamp, FaGlobe, FaSpotify } from 'react-icons/fa';
-import { SiApplemusic, SiYoutubemusic } from "react-icons/si";
+import { FaBandcamp, FaGlobe } from 'react-icons/fa';
 
 import BoothSVG from '@/public/assets/icons/booth.svg'
-import DeezerSVG from '@/public/assets/icons/deezer.svg'
 import ThbwikiSVG from '@/public/assets/icons/thbwiki.svg'
 import VgmdbSVG from '@/public/assets/icons/vgmdb.svg'
 
@@ -23,7 +21,7 @@ export default async function AlbumListing({ slug, lang }) {
             break;
         }
     }
-    const test = 0
+    const test = 1
 
     if (test) {
         return (
@@ -49,14 +47,14 @@ export default async function AlbumListing({ slug, lang }) {
 
                     {album.vgmdb ?
                         <a href={album.vgmdb} className="kodama_btn kodama_btn--primary">
-                            <VgmdbSVG className='h-4 w-4 mr-2' />
+                            <Image src={VgmdbSVG} alt='VGMDB' className='h-4 w-4 mr-2 filter invert' />
                             VGMdb
                         </a>
                         : null}
 
                     {album.thbwiki ?
                         <a href={album.thbwiki} className="kodama_btn kodama_btn--primary">
-                            <ThbwikiSVG className='h-4 w-4 mr-2' />
+                            <Image src={ThbwikiSVG} alt='Thbwiki' className='h-4 w-4 mr-2' />
                             THB WIKI
                         </a>
                         : null}
@@ -69,44 +67,12 @@ export default async function AlbumListing({ slug, lang }) {
                         Bandcamp
                     </a>
 
-                    <a href={album.booth} className="kodama_btn kodama_btn--primary">
-                        <BoothSVG className='h-4 w-4 mr-2' />
-                        BOOTH
-                    </a>
-                </div>
-
-                { (album.appleMusic || album.spotify || album.deezer || album.youtubeMusic) && 
-                    <h3 className="text-lg font-semibold mt-4">{t('common:words.streaming')}</h3>
-                }
-                <div className="flex flex-wrap mt-2 gap-4">
-                    {album.appleMusic ?
-                        <a href={album.appleMusic} className="kodama_btn kodama_btn--secondary">
-                            <SiApplemusic className='h-4 w-4 mr-2' />
-                            Apple Music
+                    {album.booth ?
+                        <a href={album.booth} className="kodama_btn kodama_btn--primary">
+                            <Image src={BoothSVG} alt='Booth' className='h-4 w-4 mr-2 filter invert' />
+                            BOOTH
                         </a>
                         : null}
-
-                    {album.deezer ?
-                        <a href={album.deezer} className="kodama_btn kodama_btn--secondary">
-                            <DeezerSVG className='h-4 w-4 mr-2' />
-                            Deezer
-                        </a>
-                        : null}
-
-                    {album.spotify ?
-                        <a href={album.spotify} className="kodama_btn kodama_btn--secondary">
-                            <FaSpotify className='h-4 w-4 mr-2' />
-                            Spotify
-                        </a>
-                        : null}
-
-                    {album.youtubeMusic ?
-                        <a href={album.youtubeMusic} className="kodama_btn kodama_btn--secondary">
-                            <SiYoutubemusic className='h-4 w-4 mr-2' />
-                            YouTube Music
-                        </a>
-                        : null}
-
                 </div>
             </div>
         </div>

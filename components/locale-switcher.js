@@ -7,7 +7,6 @@ export default function LocaleSwitcher({lang}) {
     const locales = ['en', 'jp']
     const pathname = usePathname()
     const asPath = pathname.replace(/\/(en|jp)/, '')
-    console.log(asPath)
     
     return (
         <div className="w-fit m-0 text-black bg-white/50 hover:bg-black/80 hover:text-white px-3 py-2 rounded-md text-sm font-medium border-2 border-transparent focus-visible:border-purple-600 focus-visible:outline-none transition">

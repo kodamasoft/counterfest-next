@@ -2,6 +2,7 @@
 	"common": {
 		"words": {
 			"download": "ダウンロード"
-		}
+		},
+		"upcoming": "Upcoming albums will be listed here."
 	}
 }

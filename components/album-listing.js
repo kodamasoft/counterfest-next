@@ -1,19 +1,19 @@
 import { FaBandcamp, FaGlobe, FaSpotify } from 'react-icons/fa';
 import { SiApplemusic, SiYoutubemusic } from "react-icons/si";
 
-import BoothSVG from '../public/assets/icons/booth.svg'
-import DeezerSVG from '../public/assets/icons/deezer.svg'
-import ThbwikiSVG from '../public/assets/icons/thbwiki.svg'
-import VgmdbSVG from '../public/assets/icons/vgmdb.svg'
+import BoothSVG from '@/public/assets/icons/booth.svg'
+import DeezerSVG from '@/public/assets/icons/deezer.svg'
+import ThbwikiSVG from '@/public/assets/icons/thbwiki.svg'
+import VgmdbSVG from '@/public/assets/icons/vgmdb.svg'
 
-import albumsJSON from '/public/assets/discography/albums.json'
+import albumsJSON from '@/public/assets/discography/albums.json'
 import Image from "next/image";
-import useTranslation from 'next-translate/useTranslation'
+import { getDictionary } from "@/app/[lang]/dictionaries";
 import DateFormatter from './date-formatter'
 
-export default function AlbumListing({ slug }) {
+export default async function AlbumListing({ slug, lang }) {
     let album = {};
-    const { t } = useTranslation('common')
+    const dict = await getDictionary(lang);
 
     // if we find an album with the key equal as the slug we are looking for, return the album
     let keys = Object.keys(albumsJSON);
@@ -23,9 +23,11 @@ export default function AlbumListing({ slug }) {
             break;
         }
     }
+    const test = 0
 
-    return (
-        <div className="not-prose group relative w-full md:max-w-2xl mx-auto content-center border-solid border border-violet-500/50 hover:border-violet-500 rounded-xl flex flex-col md:flex-row my-5 transition items-center">
+    if (test) {
+        return (
+                <div className="not-prose group relative w-full md:max-w-2xl mx-auto content-center border-solid border border-violet-500/50 hover:border-violet-500 rounded-xl flex flex-col md:flex-row my-5 transition items-center">
 
             <div className="relative h-52 w-52 my-5 mx-auto md:m-5 md:mr-0 aspect-square rounded-md shadow-lg transition overflow-clip flex-none" style={{ backgroundColor: album.coverColor }}>
                 <Image src={album.cover} alt={album.name} sizes="13rem" quality={100} priority={true} width={208} height={208} />
@@ -60,7 +62,7 @@ export default function AlbumListing({ slug }) {
                         : null}
                 </div>
 
-                <h3 className="text-lg font-semibold mt-4">{t('common:words.download')}</h3>
+                <h3 className="text-lg font-semibold mt-4">{dict.common.words.download}</h3>
                 <div className="flex flex-wrap mt-2 gap-4">
                     <a href={album.bandcamp} className="kodama_btn kodama_btn--primary">
                         <FaBandcamp className='h-4 w-4 mr-2' />
@@ -108,5 +110,8 @@ export default function AlbumListing({ slug }) {
                 </div>
             </div>
         </div>
-    )
+            );
+        } else {
+            return <div>Loading...</div>; // or some other fallback component
+        }
 }

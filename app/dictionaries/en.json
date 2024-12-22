@@ -1,3 +1,7 @@
 {
-	
+	"common": {
+		"words": {
+			"download": "Download"
+		}
+	}
 }

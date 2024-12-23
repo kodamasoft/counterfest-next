@@ -1,19 +1,19 @@
+"use client"
+
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
 import { useState, useEffect } from 'react';
 
-export default function ProjectListing({ project, category }) {
-	const { t, lang } = useTranslation();
- 
+export default function ProjectListing({ project, category, dict }) {
+
 	const [status, setStatus] = useState("")
 	const [deadline, setDeadline] = useState("")
 
 	useEffect(() => {
-		setStatus(t('projects:common.statuses.' + project.status))
+		setStatus(`dict.projects.common.statuses.` + project.status)
 
 		if (project.deadline) 
 			setDeadline(t(new Date(project.deadline).toLocaleDateString(lang,{year:"numeric", month:"short", day:"numeric"})))
-	}, [project, t, lang])
+	}, [project, lang])
 
 	function statusBadgeStyles(status) {
 		let styles = "inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-white rounded-full text-base";

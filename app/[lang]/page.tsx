@@ -1,9 +1,10 @@
-import IndexMDX from '@/markdown/index.mdx'
+import dynamic from 'next/dynamic';
 import { getDictionary } from './dictionaries'
 
 export default async function Home({params}) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
+    const IndexMDX = dynamic(() => import(`@/markdown/index.${lang}.mdx`));
     // Use {dict.title} corresponding to the title in the dictionary
     
     return (

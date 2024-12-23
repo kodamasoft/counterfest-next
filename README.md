@@ -1,38 +1,130 @@
 # counterfest-next
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1d18fbb-7b34-4c31-80d7-a8bd3495ae05/deploy-status)](https://app.netlify.com/sites/kodamasoft/deploys)
 
-## Getting Started
+# How to run
 
-First, run the development server:
+After running `npm install` and `npm run dev`, you can visit the blog at [http://localhost:3000/](http://localhost:3000/).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Information editing guide
+
+## Blogposts
+
+To add a blogpost, create a new file in the `_posts` directory. The file should be named with the ID of your post. The file should start with the following header:
+
+```yaml
+---
+title: 'KodamaDirect 2024'
+date: '2024-03-30T18:00:00+0200'
+locale: jp
+author: Robin
+public: true
+twin: kodamadirect-2024
+---
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `title` is the title of the post.
+- `date` is the date and time of the post. (in ISO 8601 format)
+- `locale` is the locale of the post.
+- `author` is the author of the post.
+- `public` is whether the post is public or not.
+- `twin` is the twin post of the post. (if your post is a JP twin of an already existing EN post, you should put the ID of the EN post here, and vice versa)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The rest of the file is the content of the post. You can use MDX syntax to write the content of the post.
+All posts are displayed in the homepage page in the order of their `date` field.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Counterfest / Discography
 
-## Learn More
+- To edit the page itself: `/app/[lang]/discography/page.tsx`
+- To edit the listings: `/public/assets/discography/albums.json`
 
-To learn more about Next.js, take a look at the following resources:
+## Releases
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+All releases are listed in the `/_releases/` directory. Each release is a JSON file with the following structure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```json
+{
+  "title": "KodamaDirect 2024",
+  "date": "2024-03-30T18:00:00+0200",
+  "locale": "jp",
+  "author": "Robin",
+  "public": true,
+  "twin": "kodamadirect-2024",
+  "content": "This is the content of the release."
+}
+```
 
-## Deploy on Vercel
+## Projects & Project pages
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- To edit the page itself: `/app/[lang]/projects/page.tsx`
+- To edit the listings: `/public/assets/projects/projects.json`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### About said listings
+
+The information in the listings is used to generate the links to the project pages, as well as the recap inside the project pages themselves.
+
+The `projects.json` file is structured as follows:
+
+```json
+[
+ {
+	"cat_slug": "tribute-albums",
+	"projects": [
+		{
+			"slug": "midnight-syndrome-2",
+			"status": "accepting",
+			"percentage": "0",
+			"duration": "00:00",
+			"finished_tracks": "0",
+			"mastering": {
+				"status": "pending",
+				"engineer": "???"
+			},
+			"artwork_comission": "pending",
+			"color": "#e94242"
+		},
+            ...
+        ]
+    },
+```
+
+The file contains a list of categories.
+
+- `cat_slug` is the ID of the category.
+  - This ID is used to set the title and description of the category. They're set in `/app/dictionaries/[lang].json`.
+- `projects` is an array of projects.
+  - `slug` is the ID of the project.
+    - This ID is used to set the title and description of the project. They're set in `/app/dictionaries/[lang].json` under their respective category.
+  - `status` is the status of the project.
+  - `percentage` is the percentage of completion of the project.
+  - `duration` is the duration of the project.
+  - `finished_tracks` is the number of finished tracks.
+  - `deadline` is the deadline of the project.
+  - `mastering` is the mastering information of the project.
+    - `status` is the status of the mastering.
+    - `engineer` is the mastering engineer.
+  - `artwork_comission` is the status of the artwork commission.
+  - `color` is the color of the project card.
+
+### Project pages
+
+Each project has its own page in the `/_projects/` directory. The file should be named with the ID of the project in the listings. The file should start with the following header:
+
+```js
+export const meta = {
+    locale: 'jp',
+    slug: 'fragments-of-gratitude-ii',
+}
+```
+
+- `locale` is the locale of the project.
+- `slug` is the ID of the project. This ID should match the one in the listings AND the filename.
+
+The rest of the file is the content of the project page. You can use MDX syntax to write the content of the page.
+Refer to the other pages in the directory for examples on how to add content, set deadlines, refer discography releases
+
+## Staff
+
+- To edit the page itself: `/app/[lang]/staff/page.tsx`
+- To edit the listings: `/public/assets/staff/stafflist.json`
+The `"_legacy": "true"` field is used to determine whether the staff member is displayed in the legacy section (bottom of the page) or not.

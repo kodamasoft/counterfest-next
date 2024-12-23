@@ -1,5 +1,96 @@
 {
-	"test": {
-	  "hello": "ハロー・ワールド"
+	"common": {
+		"words": {
+			"download": "ダウンロード"
+		},
+		"upcoming": "新作はここに掲載される。"
+	},
+	"projects": {
+		"presentation": {
+			"title": "プロジェクト",
+			"description": "KodamaSoundsのアルバムは、常に成長し続けるやむことのない同人アルバムプロジェクトです。本ページを通して、いつでも参加できるアルバム企画とプロジェクトのページにアクセスできます。スケジュールは定期的に更新し、新しいプロジェクトの締切は一般的に事前に決めます。締切があるアルバムへの参加をお勧めしますが、締切のない続編アルバムに参加しても全然大丈夫です。ただ、このようなアルバムのリリースは1、2年（あるいはそれ以上！）かかるかもしれません。ご了承ください。"
+		},
+		"faqCta": "全アルバム共通のルールと応募の仕方はこちら",
+		"common" : {
+			"themes": "テーマ",
+			"status": "現状",
+			"statuses": {
+				"pending": "保留中",
+				"ongoing": "進行中",
+				"sketching": "ジャケットアートワークを作成中",
+
+				"completed": "完成",
+				"accepting": "応募受付中",
+				"cancelled": "中止",
+				"about-to-release": "もうすぐリリース"
+			},
+			"deadline": "締切",
+			"release-info": "アルバム詳細",
+			"current-project": "現在進行中のプロジェクト",
+			"past-releases": "今までのアルバム"
+		},
+		"projectInfo": {
+			"album_title": "アルバムのタイトル",
+			"status": "ステータス",
+			"approximate-completion": "完成率の目安",
+			"current-duration": "現在の長さ",
+			"current-number-of-finished-tracks": "現在の完成曲数",
+			"mastering-engineer": "マスタリングエンジニア",
+			"mastering-status": "マスタリングステータス",
+			"artwork-commission": "ジャケット画像の依頼"
+		},
+		"tribute-albums": {
+			"name": "「Tribute」アルバム",
+			"desc": "これは、特定のシリーズやゲームを中心とするアルバムです。ガイドラインに沿っていれば、スタイルやジャンルは問いません。イメージソングもOKです。",
+			"moonstruck-analogy-ii": {
+				"title": "Moonstruck Analogy -a TYPE-MOON tribute album- II",
+				"themes": "TYPE-MOON中心 (Fate/stay night、月姫…)"
+			},
+			"fragments-of-gratitude-ii": {
+				"title": "Fragments of Gratitude -a When They Cry tribute album- II",
+				"themes": "07th Expansion中心 (ひぐらしのなく頃に、 うみねこのなく頃に…)"
+			},
+			"katamania": {
+				"title": "Katamania!! -a Katamari tribute album-",
+				"themes": "塊魂シリーズ中心"
+			},
+			"katamania-2": {
+				"title": "Katamania!! 2?! -a Katamari tribute album-",
+				"themes": "塊魂シリーズ中心"
+			},
+			"midnight-syndrome": {
+				"title": "MIDNIGHT SYNDROME -a Grasshopper Manufacture tribute album-",
+				"themes": "グラスホッパー・マニファクチュア / SUDA51中心"
+			},
+			"midnight-syndrome-2": {
+				"title": "MIDNIGHT SYNDROME 2 -a Grasshopper Manufacture tribute album-",
+				"themes": "グラスホッパー・マニファクチュア / SUDA51中心"
+			},
+			"vanilla-parfait": {
+				"title": "Vanilla Parfait -a Vanillaware tribute album-",
+				"themes": "ヴァニラウエアトリビュートアルバム (十三機兵防衛圏、朧村正、オーディンスフィア...)"
+			}
+		},
+		"goals": {
+			"title": "KodamaSoundsの目的",
+			"points": {
+				"one": {
+					"title": "国もスキルレベルも気にしません。誰でも参加できること",
+					"description": "ベテランのアーティストと駆け出しのアーティストの間で、スキルバランスを保つことを保証します。誰でもアルバムに参加することを許可しており、アーティスト同士が絆を築き、またアーティストがあらゆる分野のアーティストとコラボレーションして、差別なく、より良いコミュニティ体験を作ることができる良い方法であると信じています。みんなの目的は面白い音楽を作ること、そしてみんなの能力を最大限に発揮できるよう、みんなで助け合いましょう。人気投票やえこひいきもありません。参加したい？参加すればいいです。そして、もしあなたが悩んでいるなら、私たちが手助けをします。"
+				},
+				"two": {
+					"title": "私達しか作らないアルバムのアイディア",
+					"description": "あまり有名ではないシリーズを中心とする面白くて意欲作のアルバムを一緒に作りたいと思います。ニッチなゲームシリーズを中心とするアルバムを作って本当に嬉しいです。"
+				},
+				"three": {
+					"title": "一年を通して、やめずにアルバムを発行すること",
+					"description": "私たちKodamaSoundsは、コミックマーケットやM3などの多くのイベントを通じて、できるだけ多くのアルバムを発行したいと思います。"
+				},
+				"four": {
+					"title": "多様性を目指すこと",
+					"description": "アレンジアルバムのジャンルは問いませんし、オリジナル作品「ECLECTIC RESONANCE」シリーズでは、あるジャンルをテーマとしたアルバム企画を多数予定しています。まだ収録されていない音楽のジャンルやスタイルがあれば、いつか収録されることは間違いありません。"
+				}
+			}
+		}
 	}
-  }
+}

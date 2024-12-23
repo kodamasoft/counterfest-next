@@ -1,5 +1,97 @@
 {
-	"test": {
-	  "hello": "hello world"
+	"common": {
+		"words": {
+			"download": "Download"
+		},
+		"upcoming": "New releases will be listed here."
+	},
+	"projects": {
+		"presentation": {
+			"title": "Our projects",
+			"description": "On this page, you can have direct access to our current COUNTERFEST RECORDS album plans and projects, to which you can participate at any time. Note that unlike KodamaSounds, album sequels aren’t as likely, as we prefer doing brand new projects all the time. We also don’t plan on always publishing albums during events such as M3 and Comic Market. Albums release and happen when we just feel like it. If you want to suggest a project to us, please contact us or join our Discord community. Our operating system is similar to KodamaSounds, but with more lax and lenient rules. Please check them out here."
+		},
+		"faqCta": "You can check the rules & submission patterns common to all releases here.",
+		"common" : {
+			"themes": "Themes",
+			"status": "Status",
+			"statuses": {
+				"pending": "Pending",
+				"ongoing": "Ongoing",
+				"sketching": "In production",
+
+				"completed": "Completed",
+				"accepting": "Accepting Submissions",
+				"cancelled": "Cancelled",
+				"released": "Completed & Released",
+				"about-to-release": "Final Touches & About to Release"
+			},
+			"deadline": "Deadline",
+			"release-info": "Releases Information",
+			"current-project": "Current Project",
+			"past-releases": "Past Releases"
+		},
+		"projectInfo": {
+			"album_title": "Album Title",
+			"status": "Status",
+			"approximate_completion": "Approximate Completion",
+			"current_duration": "Current Duration",
+			"current_number-of-finished-tracks": "Current Number of Finished Tracks",
+			"mastering_engineer": "Mastering Engineer",
+			"mastering_status": "Mastering Status",
+			"artwork_commission": "Artwork Commission"
+		},
+		"tribute-albums": {
+			"name": "Tribute Albums",
+			"desc": "Those are albums entirely dedicated to a specific series/game. Any styles and genres are accepted, so long as they follow our individual guidelines. Image songs are also accepted so long as they follow the rules.",
+			"katamania": {
+				"title": "Katamania!! -a Katamari tribute album-",
+				"themes": "Katamari centered album"
+			},
+			"katamania-2": {
+				"title": "Katamania!! 2?! -a Katamari tribute album-",
+				"themes": "Katamari centered album"
+			},
+			"midnight-syndrome": {
+				"title": "MIDNIGHT SYNDROME -a Grasshopper Manufacture tribute album-",
+				"themes": "Grasshopper Manufacture / SUDA51 centered album"
+			},
+			"midnight-syndrome-2": {
+				"title": "MIDNIGHT SYNDROME 2 -a Grasshopper Manufacture tribute album-",
+				"themes": "Grasshopper Manufacture / SUDA51 centered album"
+			},
+			"vanilla-parfait": {
+				"title": "Vanilla Parfait -a Vanillaware tribute album-",
+				"themes": "Vanillaware tribute album (13 Sentinels, Muramasa, Odin Sphere...)"
+			},
+			"moonstruck-analogy-ii": {
+				"title": "Moonstruck Analogy -a TYPE-MOON tribute album- II",
+				"themes": "TYPE-MOON centered album (Fate/stay night, Tsukihime…)"
+			},
+			"fragments-of-gratitude-ii": {
+				"title": "Fragments of Gratitude -a When They Cry tribute album- II",
+				"themes": "07th Expansion centered album (Higurashi, Umineko…)"
+			}
+		},
+		"goals": {
+			"title": "Our goals",
+			"points": {
+				"one": {
+					"title": "Bring together artists from all places & skills",
+					"description": "We ensure we maintain a certain balance of skill sets, between veteran artists and artists that are just starting out. We authorize all people to participate in those albums, and we believe it is a good way for artists to form bonds with others while also permitting people to collaborate with people of all horizons to improve and create a good community experience, with no discrimination. No popularity contest, no favoritism: You wanna hop in? You can! And if you’re struggling, we’ll help out."
+				},
+				"two": {
+					"title": "Album ideas you don’t see elsewhere",
+					"description": "More interesting and ambitious arrange albums for lesser-represented series out there. We are more than happy and proud to arrange albums for more niche & outcast game series."
+				},
+				"three": {
+					"title": "A constant stream of albums throughout the years",
+					"description": "We ensure to publish as many albums as we can, spread out through the many Comic Market and M3 events."
+				},
+				"four": {
+					"title": "Crave variety",
+					"description": "We make sure to accept all kinds of genres for our arrange albums, and there are many musically-themed album projects planned for our “ECLECTIC RESONANCE” original work series. If there’s a genre or style of music that is not yet represented on these albums, it surely will soon."
+				}
+			}
+		}
 	}
-  }
+}

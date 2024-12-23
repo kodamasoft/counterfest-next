@@ -1,25 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import layoutStyles from "@/components/layout.module.css";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 
 export const metadata: Metadata = {
     title: "COUNTERFEST RECORDS",
     description: "COUNTERFEST RECORDS is the Bootleg Sub-Label for KodamaSounds, offering free albums and artistic freedom for unique and experimental music projects. Join us for a more leftfield environment and support for all kinds of music and counter cultures.",
-    icons: {
-        icon: [
-          {
-            media: '(prefers-color-scheme: light)',
-            url: '/icons/Logo_DarkOrange_Transparent.png',
-            href: '/icons/Logo_DarkOrange_Transparent.png',
-          },
-          {
-            media: '(prefers-color-scheme: dark)',
-            url: '/icons/Logo_Orange_Transparent.png',
-            href: '/icons/Logo_Orange_Transparent.png',
-          },
-        ],
-      },
 };
+
 
 export default async function RootLayout({
     children,
@@ -34,7 +24,15 @@ export default async function RootLayout({
             <body
                 className={`antialiased bg-white text-black dark:bg-black dark:text-white`}
             >
-                {children}
+                <div className={layoutStyles.main_container}>
+                    <div className={layoutStyles.main + " " + " min-h-screen"}>
+                        <Header params={params} />
+                        <main>
+                            {children}
+                        </main>
+                        <Footer />
+                    </div>
+                </div>
             </body>
         </html>
     );

@@ -11,7 +11,7 @@ export default {
         typography,
     ],
     theme: {
-        extend: {        
+        extend: { 
             animation: {
                 "fade-in-down": "fade-in-down 0.6s ease-in-out"
             },

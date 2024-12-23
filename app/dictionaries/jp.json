@@ -29,8 +29,8 @@
 			"current-project": "現在進行中のプロジェクト",
 			"past-releases": "今までのアルバム"
 		},
-		"project-info": {
-			"album-title": "アルバムのタイトル",
+		"projectInfo": {
+			"album_title": "アルバムのタイトル",
 			"status": "ステータス",
 			"approximate-completion": "完成率の目安",
 			"current-duration": "現在の長さ",

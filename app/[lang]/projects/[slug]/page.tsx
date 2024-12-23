@@ -15,8 +15,8 @@ export default async function Project({ params }) {
 	const components = {
 		WrappableParagraph,
 		CtaButton,
-		AlbumListing: (props) => <AlbumListing {...props} lang={lang} slug={slug} />,
-		ProjectInformation
+		AlbumListing: () => <AlbumListing lang={lang} />,
+		ProjectInformation: (props) => <ProjectInformation {...props} params={params} />,
 	}
 
 	const MDX = dynamic(() => import(`@/projects/${slug}.${lang}.mdx`));

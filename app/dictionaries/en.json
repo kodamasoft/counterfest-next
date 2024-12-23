@@ -30,15 +30,15 @@
 			"current-project": "Current Project",
 			"past-releases": "Past Releases"
 		},
-		"project-info": {
-			"album-title": "Album Title",
+		"projectInfo": {
+			"album_title": "Album Title",
 			"status": "Status",
-			"approximate-completion": "Approximate Completion",
-			"current-duration": "Current Duration",
-			"current-number-of-finished-tracks": "Current Number of Finished Tracks",
-			"mastering-engineer": "Mastering Engineer",
-			"mastering-status": "Mastering Status",
-			"artwork-commission": "Artwork Commission"
+			"approximate_completion": "Approximate Completion",
+			"current_duration": "Current Duration",
+			"current_number-of-finished-tracks": "Current Number of Finished Tracks",
+			"mastering_engineer": "Mastering Engineer",
+			"mastering_status": "Mastering Status",
+			"artwork_commission": "Artwork Commission"
 		},
 		"tribute-albums": {
 			"name": "Tribute Albums",

@@ -21,6 +21,7 @@ export default async function AlbumListing({ slug, lang }) {
             break;
         }
     }
+    console.log(album)
 
     if (album) {
         return (

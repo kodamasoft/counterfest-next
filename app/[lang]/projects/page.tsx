@@ -20,24 +20,24 @@ export default async function Projects({ params }) {
             <ProseContainer>
               <h2>{dict.projects.presentation.title}</h2>
               <p>{dict.projects.presentation.description}</p>
-              <CtaButton link={`/${lang}/projects`} icon='book' className="mt-4 mx-auto">
+              <CtaButton link={`/${lang}/faq`} icon='book' className="mt-4 mx-auto">
                 <span>{dict.projects.faqCta}</span>
               </CtaButton>
 
               <div>
-                {projectsJson.map(function (category) {
+                {projectsJson.map(function (category, index) {
                   return (
-                    <>
+                    <div key={index}>
                       <h2>{dict.projects[category.cat_slug].name}</h2>
                       <p>{dict.projects[category.cat_slug].desc}</p>
 
                       {category.projects.map(function (project) {
                         return (
-                          <ProjectListing project={project} category={category} dict={dict} key={project.slug} />
+                          <ProjectListing project={project} category={category} dict={dict} lang={lang} key={project.slug} />
                         )
                       }
                       )}
-                    </>)
+                    </div>)
                 })}
               </div>
 

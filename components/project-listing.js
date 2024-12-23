@@ -3,17 +3,18 @@
 import Link from 'next/link'
 import { useState, useEffect } from 'react';
 
-export default function ProjectListing({ project, category, dict }) {
+export default function ProjectListing({ project, category, dict, lang }) {
 
 	const [status, setStatus] = useState("")
 	const [deadline, setDeadline] = useState("")
+	const projectStatuses = dict.projects.common.statuses[project.status]
 
 	useEffect(() => {
-		setStatus(`dict.projects.common.statuses.` + project.status)
+		setStatus(projectStatuses)
 
-		/*if (project.deadline) 
-			setDeadline(t(new Date(project.deadline).toLocaleDateString(lang,{year:"numeric", month:"short", day:"numeric"})))*/
-	}, [project])
+		if (project.deadline) 
+			setDeadline(new Date(project.deadline).toLocaleDateString(lang,{year:"numeric", month:"short", day:"numeric"}))
+	}, [project, projectStatuses, lang])
 
 	function statusBadgeStyles(status) {
 		let styles = "inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-white rounded-full text-base";
@@ -45,10 +46,10 @@ export default function ProjectListing({ project, category, dict }) {
 		<Link href={"/projects/"+project.slug} passHref key={project.slug} className={"flex flex-col text-center no-underline not-prose md:max-w-2xl mx-auto content-center rounded-xl my-5 transition py-5 px-10 relative hover:-translate-y-1 "} style={{backgroundColor : project.color+ "44"}}>
 		
 				<h3 className="text-2xl font-semibold mt-0">
-					{dict.projects + '.' + category.cat_slug + '.' + project.slug + `.title`}
+					{dict.projects[category.cat_slug][project.slug].title}
 				</h3>
 				<p className='font-normal text-base'>
-					{`projects.common.themes`}: {`projects.` + category.cat_slug + '.' + project.slug + `.themes`}
+					{dict.projects.common.themes}: {dict.projects[category.cat_slug][project.slug].themes}
 				</p>
 				<p>
 					<span className={statusBadgeStyles(project.status)}>{status}</span> | {project.percentage}% |{' '}
@@ -63,7 +64,7 @@ export default function ProjectListing({ project, category, dict }) {
 						}}
 					></div>
 				</div>
-				{deadline && <p>{/*{t('projects:common.deadline')}*/}: {deadline}</p>}
+				{deadline && <p>{dict.projects.common.deadline}: {deadline}</p>}
 			
 		</Link>
 	)

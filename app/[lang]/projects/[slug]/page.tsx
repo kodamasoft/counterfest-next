@@ -15,7 +15,7 @@ export default async function Project({ params }) {
 	const components = {
 		WrappableParagraph,
 		CtaButton,
-		AlbumListing: (props) => <AlbumListing {...props} lang={lang} />,
+		AlbumListing: (props) => <AlbumListing {...props} lang={lang} slug={slug} />,
 		ProjectInformation
 	}
 

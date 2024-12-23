@@ -52,7 +52,7 @@ html {
 }
 
 .kodama_btn--primary {
-	@apply bg-violet-600 hover:bg-violet-700 focus:ring-violet-800;
+	@apply bg-orange-500/80 hover:bg-orange-500/70 focus:ring-orange-800;
 }
 
 .kodama_btn--lg {

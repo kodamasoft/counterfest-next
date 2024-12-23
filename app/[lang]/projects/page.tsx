@@ -21,15 +21,15 @@ export default async function Projects({ params }) {
               <h2>{dict.projects.presentation.title}</h2>
               <p>{dict.projects.presentation.description}</p>
               <CtaButton link="/projects/faq" icon='book' className="mt-4 mx-auto">
-                <span>{`dict.projects.faq-cta`}</span>
+                <span>{dict.projects.faqCta}</span>
               </CtaButton>
 
               <div>
                 {projectsJson.map(function (category) {
                   return (
                     <>
-                      <h2>{/*{t('projects:' + category.cat_slug + '.name')}*/}</h2>
-                      <p>{/*{t('projects:' + category.cat_slug + '.desc')}*/}</p>
+                      <h2>{dict.projects[category.cat_slug].name}</h2>
+                      <p>{dict.projects[category.cat_slug].desc}</p>
 
                       {category.projects.map(function (project) {
                         return (
@@ -41,15 +41,13 @@ export default async function Projects({ params }) {
                 })}
               </div>
 
-              {/*<h2>{t('common:projects.goals.title')}</h2>
-              <ul><li>{t('common:projects.goals.points.1.title')}</li></ul>
-              <p>{t('common:projects.goals.points.1.description')}</p>
-              <ul><li>{t('common:projects.goals.points.2.title')}</li></ul>
-              <p>{t('common:projects.goals.points.2.description')}</p>
-              <ul><li>{t('common:projects.goals.points.3.title')}</li></ul>
-              <p>{t('common:projects.goals.points.3.description')}</p>
-              <ul><li>{t('common:projects.goals.points.4.title')}</li></ul>
-              <p>{t('common:projects.goals.points.4.description')}</p>*/}
+              <h2>{dict.projects.goals.title}</h2>
+              {Object.entries(dict.projects.goals.points).map(([key, point]) => (
+                <div key={key}>
+                  <ul><li>{point.title}</li></ul>
+                  <p>{point.description}</p>
+                </div>
+              ))}
             </ProseContainer>
           </div>
         </Container>

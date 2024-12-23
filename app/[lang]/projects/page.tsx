@@ -20,7 +20,7 @@ export default async function Projects({ params }) {
             <ProseContainer>
               <h2>{dict.projects.presentation.title}</h2>
               <p>{dict.projects.presentation.description}</p>
-              <CtaButton link="/projects/faq" icon='book' className="mt-4 mx-auto">
+              <CtaButton link={`/${lang}/projects`} icon='book' className="mt-4 mx-auto">
                 <span>{dict.projects.faqCta}</span>
               </CtaButton>
 

@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import useTranslation from 'next-translate/useTranslation'
+//import useTranslation from 'next-translate/useTranslation'
 import DateFormatter from '../components/date-formatter'
 
 export default function PostHeader({ title, date, author, twin }) {
-  const { t } = useTranslation('common')
+  //const { t } = useTranslation('common')
 
   return (
     <div className='max-w-prose	text-white mx-auto border-b pb-4 mb-4 border-slate-500/20 sm:text-center' >

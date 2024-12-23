@@ -1,10 +1,12 @@
+'use client'
+
 /* https://github.com/samselikoff/2022-06-09-resizable-panel/commit/fe04a842367657b4acb1058c454d3eca739c419d */
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter, usePathname } from 'next/navigation';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import React from 'react';
 
-import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
+import { AnimatePresence, motion, MotionConfig } from 'motion/react';
 import useMeasure from 'react-use-measure';
 import Link from 'next/link';
 
@@ -12,7 +14,9 @@ let duration = 0.25;
 
 export default function WrappableParagraph({ title, children }) {
 	let [opened, setOpened] = useState(false);
-	let { asPath } = useRouter();
+	const pathname = usePathname();
+	const asPath = pathname.replace(/\/(en|jp)/, '')
+	console.log(asPath);
 	const encodedTitleId = encodeURIComponent(title);
 
 	useEffect(() => {

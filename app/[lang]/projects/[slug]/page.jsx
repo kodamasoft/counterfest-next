@@ -5,12 +5,11 @@ import CtaButton from '@/components/project/cta-button';
 import ProjectInformation from '@/components/project-information';
 import Container from '@/components/container';
 import ProseContainer from '@/components/prose-container';
+import WrappableParagraph from '@/components/project/title-with-content';
 
 export default async function Project({ params }) {
 	const {slug} = await params
 	const {lang} = await params
-
-	const WrappableParagraph = (props) => <div className='' {...props}>{props.children}</div>
 
 	const components = {
 		WrappableParagraph,

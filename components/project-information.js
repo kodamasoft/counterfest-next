@@ -1,9 +1,9 @@
 import projectsJSON from '@/public/assets/projects/projects.json';
 import { getDictionary } from "@/app/[lang]/dictionaries";
 
-export default async function ProjectInfo({ slug, children, params }) {
+export default async function ProjectInfo({ slug, /*children,*/ params }) {
     let project = {};
-    let category = {};
+    //let category = {};
     const {lang} = await params;
     const dict = await getDictionary(lang);
 
@@ -13,7 +13,7 @@ export default async function ProjectInfo({ slug, children, params }) {
         for (let j = 0; j < projectsJSON[i].projects.length; j++) {
             // if the project has the same slug as the one we are looking for, return the project
             if (projectsJSON[i].projects[j].slug === slug) {
-                category = projectsJSON[i];
+                //category = projectsJSON[i];
                 project = projectsJSON[i].projects[j];
                 break;
             }

@@ -11,9 +11,9 @@ export default function ProjectListing({ project, category, dict }) {
 	useEffect(() => {
 		setStatus(`dict.projects.common.statuses.` + project.status)
 
-		if (project.deadline) 
-			setDeadline(t(new Date(project.deadline).toLocaleDateString(lang,{year:"numeric", month:"short", day:"numeric"})))
-	}, [project, lang])
+		/*if (project.deadline) 
+			setDeadline(t(new Date(project.deadline).toLocaleDateString(lang,{year:"numeric", month:"short", day:"numeric"})))*/
+	}, [project])
 
 	function statusBadgeStyles(status) {
 		let styles = "inline-block py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-bold text-white rounded-full text-base";
@@ -45,10 +45,10 @@ export default function ProjectListing({ project, category, dict }) {
 		<Link href={"/projects/"+project.slug} passHref key={project.slug} className={"flex flex-col text-center no-underline not-prose md:max-w-2xl mx-auto content-center rounded-xl my-5 transition py-5 px-10 relative hover:-translate-y-1 "} style={{backgroundColor : project.color+ "44"}}>
 		
 				<h3 className="text-2xl font-semibold mt-0">
-					{t('projects:' + category.cat_slug + '.' + project.slug + '.title')}
+					{dict.projects + '.' + category.cat_slug + '.' + project.slug + `.title`}
 				</h3>
 				<p className='font-normal text-base'>
-					{t('projects:common.themes')}: {t('projects:' + category.cat_slug + '.' + project.slug + '.themes')}
+					{`projects.common.themes`}: {`projects.` + category.cat_slug + '.' + project.slug + `.themes`}
 				</p>
 				<p>
 					<span className={statusBadgeStyles(project.status)}>{status}</span> | {project.percentage}% |{' '}
@@ -63,7 +63,7 @@ export default function ProjectListing({ project, category, dict }) {
 						}}
 					></div>
 				</div>
-				{deadline && <p>{t('projects:common.deadline')}: {deadline}</p>}
+				{deadline && <p>{/*{t('projects:common.deadline')}*/}: {deadline}</p>}
 			
 		</Link>
 	)

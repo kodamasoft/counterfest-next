@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import useTranslation from 'next-translate/useTranslation'
 import ReleaseNav from './release-nav'
-import styles from './release-head.module.css'
+//import styles from './release-head.module.css'
 
 export default function ReleaseHead({
 	slug,

@@ -1,8 +1,6 @@
-import projectsJSON from '/public/assets/projects/projects.json'
-import useTranslation from 'next-translate/useTranslation'
+import projectsJSON from '@/public/assets/projects/projects.json'
 
-export default function ProjectInfo({ slug, children }) {
-    const { t, lang } = useTranslation();
+export default async function ProjectInfo({ slug, children, lang }) {
     let project = {};
     let category = {};
 
@@ -21,7 +19,7 @@ export default function ProjectInfo({ slug, children }) {
 
 	return (
 		<p>
-            <strong>{t("projects:project-info.album-title")}:</strong> {t('projects:' + category.cat_slug + '.' + project.slug + '.title')}<br/>
+            {/*<strong>{t("projects:project-info.album-title")}:</strong> {t('projects:' + category.cat_slug + '.' + project.slug + '.title')}<br/>
             <strong>{t("projects:project-info.status")}:</strong> { t('projects:common.statuses.' + project.status) }<br/>
             <strong>{t("projects:project-info.approximate-completion")}:</strong> { project.percentage ? project.percentage : " ??? "}%<br/>
             <strong>{t("projects:project-info.current-duration")}:</strong> { project.duration ? project.duration : " ??? "}<br/>
@@ -29,6 +27,6 @@ export default function ProjectInfo({ slug, children }) {
             <strong>{t("projects:project-info.mastering-engineer")}:</strong> { project.mastering && project.mastering.engineer ? project.mastering.engineer : " ??? "}<br/>
             <strong>{t("projects:project-info.mastering-status")}:</strong> { project.mastering && project.mastering.status ? t('projects:common.statuses.' + project.mastering.status) : " ??? "}<br/>
             <strong>{t("projects:project-info.artwork-commission")}:</strong> { project.artwork_comission ? t('projects:common.statuses.' + project.artwork_comission) : " ??? "}<br/>
-		</p>
+		*/}</p>
 	)
 }

@@ -16,7 +16,6 @@ export default async function Discography({params}) {
   Object.keys(albumsJson).sort((a, b) => {
     const dateA = new Date(albumsJson[a].releaseDate);
     const dateB = new Date(albumsJson[b].releaseDate);
-    console.log(dateA, dateB);
     if (dateA.getTime() === dateB.getTime()) {
       // If release dates are the same, sort by catalog number in descending order
       return albumsJson[b].id.localeCompare(albumsJson[a].id);

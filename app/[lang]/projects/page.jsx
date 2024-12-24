@@ -40,14 +40,6 @@ export default async function Projects({ params }) {
                     </div>)
                 })}
               </div>
-
-              <h2>{dict.projects.goals.title}</h2>
-              {Object.entries(dict.projects.goals.points).map(([key, point]) => (
-                <div key={key}>
-                  <ul><li>{point.title}</li></ul>
-                  <p>{point.description}</p>
-                </div>
-              ))}
             </ProseContainer>
           </div>
         </Container>

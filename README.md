@@ -1,6 +1,6 @@
 # counterfest-next
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f1d18fbb-7b34-4c31-80d7-a8bd3495ae05/deploy-status)](https://app.netlify.com/sites/kodamasoft/deploys)
+<!---[![Netlify Status](https://api.netlify.com/api/v1/badges/f1d18fbb-7b34-4c31-80d7-a8bd3495ae05/deploy-status)](https://app.netlify.com/sites/kodamasoft/deploys)--->
 
 # How to run
 

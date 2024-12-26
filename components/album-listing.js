@@ -8,9 +8,11 @@ import albumsJSON from '@/public/assets/discography/albums.json'
 import Image from "next/image";
 import { getDictionary } from "@/app/[lang]/dictionaries";
 import DateFormatter from './date-formatter'
+import {use} from 'react'
 
-export default async function AlbumListing({ slug, lang }) {
+export default async function AlbumListing({ slug, params }) {
     let album = {};
+    const { lang } = await params;
     const dict = await getDictionary(lang);
 
     // if we find an album with the key equal as the slug we are looking for, return the album
@@ -21,7 +23,6 @@ export default async function AlbumListing({ slug, lang }) {
             break;
         }
     }
-    console.log(album)
 
     if (album) {
         return (

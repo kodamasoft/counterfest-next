@@ -3,17 +3,18 @@
 		"cat_slug": "tribute-albums",
 		"projects": [
 			{
-				"slug": "midnight-syndrome-2",
+				"slug": "speedstars",
 				"status": "accepting",
 				"percentage": "0",
 				"duration": "00:00",
 				"finished_tracks": "0",
+				"deadline": "2025-04-23T23:59:59Z",
 				"mastering": {
 					"status": "pending",
 					"engineer": "???"
 				},
 				"artwork_comission": "pending",
-				"color": "#e94242"
+				"color": "#ff5733"
 			},
 			{
 				"slug": "vanilla-parfait",
@@ -28,6 +29,19 @@
 				},
 				"artwork_comission": "pending",
 				"color": "#ceab82"
+			},
+			{
+				"slug": "midnight-syndrome-2",
+				"status": "accepting",
+				"percentage": "0",
+				"duration": "00:00",
+				"finished_tracks": "0",
+				"mastering": {
+					"status": "pending",
+					"engineer": "???"
+				},
+				"artwork_comission": "pending",
+				"color": "#e94242"
 			},
 			{
 				"slug": "moonstruck-analogy-ii",

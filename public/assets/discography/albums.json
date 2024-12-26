@@ -38,7 +38,8 @@
         "name": "MIDNIGHT SYNDROME -a Grasshopper Manufacture tribute album-",
         "cover": "/assets/discography/covers/0015.png",
         "coverColor": "#000000",
-        "website": "/releases/midnight-syndrome",
-        "vgmdb": "https://vgmdb.net/album/137464"
+        "website": "https://kodamasoft.net/releases/midnight-syndrome",
+        "vgmdb": "https://vgmdb.net/album/137464",
+        "bandcamp": "https://kodamasounds.bandcamp.com/album/midnight-syndrome-a-grasshopper-manufacture-tribute-album"
     }
 }

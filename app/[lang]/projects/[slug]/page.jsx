@@ -6,6 +6,7 @@ import ProjectInformation from '@/components/project-information';
 import Container from '@/components/container';
 import ProseContainer from '@/components/prose-container';
 import WrappableParagraph from '@/components/project/title-with-content';
+import DiscordLink from '@/components/discord-link';
 
 export default async function Project({ params }) {
 	const {slug} = await params
@@ -16,6 +17,7 @@ export default async function Project({ params }) {
 		CtaButton,
 		AlbumListing: (props) => <AlbumListing {...props} params={params} />,
 		ProjectInformation: (props) => <ProjectInformation {...props} params={params} />,
+		DiscordLink
 	}
 
 	const MDX = dynamic(() => import(`@/projects/${slug}.${lang}.mdx`));

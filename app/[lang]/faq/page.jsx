@@ -2,6 +2,7 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 
 import WrappableParagraph from '@/components/project/title-with-content'
+import DiscordLink from '@/components/discord-link'
 import Container from '@/components/container';
 import ProseContainer from '@/components/prose-container';
 
@@ -12,7 +13,7 @@ export default async function Faq({params}) {
 		<Container>
 			<ProseContainer>
 				<div className="max-w-3xl mx-auto p-4">
-					<FaqMDX components={{ WrappableParagraph }} />
+					<FaqMDX components={{ WrappableParagraph, DiscordLink }} />
 				</div>
 			</ProseContainer>
 		</Container>

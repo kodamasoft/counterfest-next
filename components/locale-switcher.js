@@ -16,7 +16,7 @@ export default function LocaleSwitcher({lang}) {
                         <span key={i} className={l === lang ? 'font-bold' : ''}>
                             {/* to uppercase locale*/}
                             <Link href={`/${l}${asPath}`} locale={l}>
-                                {l.toUpperCase()}
+                                {l === 'jp' ? '日本語' : 'EN'}
                             </Link>
                         </span>
                     )

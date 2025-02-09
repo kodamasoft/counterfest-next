@@ -122,9 +122,3 @@ export const meta = {
 
 The rest of the file is the content of the project page. You can use MDX syntax to write the content of the page.
 Refer to the other pages in the directory for examples on how to add content, set deadlines, refer discography releases
-
-## Staff
-
-- To edit the page itself: `/app/[lang]/staff/page.tsx`
-- To edit the listings: `/public/assets/staff/stafflist.json`
-The `"_legacy": "true"` field is used to determine whether the staff member is displayed in the legacy section (bottom of the page) or not.

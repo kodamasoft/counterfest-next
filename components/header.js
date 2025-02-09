@@ -13,7 +13,7 @@ export default async function Header({params}) {
 		{ href: `/${lang}/`, label: 'Home' },
 		//{ href: `/${lang}/discography`, label: 'Discography' },
 		{ href: `/${lang}/projects`, label: 'Projects' },
-		{ href: `/${lang}/staff`, label: 'Staff' },
+		//{ href: `/${lang}/staff`, label: 'Staff' },
 		{ href: 'https://kodamasoft.net', label: 'KodamaSoft' },
 		// { href: '/blog', label: 'Blog' }
 	];

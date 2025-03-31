@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from 'next/link'
 
 import descStyles from './release-description.module.scss'
-import useTranslation from 'next-translate/useTranslation'
 
 
 function DtKodama({ children }) {

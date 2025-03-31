@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Trans from 'next-translate/Trans'
 import callToActionStyles from './release-call-to-action.module.scss'
 
 export default function ReleaseCallToAction({ store }) {

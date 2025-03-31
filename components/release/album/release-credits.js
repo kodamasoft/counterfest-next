@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+//import { useRouter } from 'next/navigation'
 
-import collaboratorsJson from '/_collaborators.json'
+import collaboratorsJson from '@/_collaborators.json'
 import {
 	FaBandcamp,
 	FaGlobe,

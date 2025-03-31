@@ -1,13 +1,12 @@
 import Head from 'next/head'
-import useTranslation from 'next-translate/useTranslation'
 
-import ReleaseHead from './release-head'
-import ReleaseDescription from './release-description'
-import ReleaseCallToAction from './release-call-to-action'
-import ReleaseTracklist from './release-tracklist'
-import ReleaseYouTubeEmbed from './release-youtube-embed'
-import ReleaseCredits from './release-credits'
-import ReleaseFooter from './release-footer'
+import ReleaseHead from './release-head.js'
+import ReleaseDescription from './release-description.js'
+import ReleaseCallToAction from './release-call-to-action.js'
+import ReleaseTracklist from './release-tracklist.js'
+import ReleaseYouTubeEmbed from './release-youtube-embed.js'
+import ReleaseCredits from './release-credits.js'
+import ReleaseFooter from './release-footer.js'
 
 import { createGlobalStyle } from 'styled-components';
 import { Noto_Sans_JP } from "next/font/google"

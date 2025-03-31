@@ -7,7 +7,7 @@ import AlbumListing from '@/components/album-listing'
 import albumsJson from "@/public/assets/discography/albums.json"
 
 export default async function Discography({params}) {
-  const lang = (await params).lang;
+  const { lang } = await params;
   const dict = await getDictionary(lang);
 
   // Order all the albums by release date (newest first)

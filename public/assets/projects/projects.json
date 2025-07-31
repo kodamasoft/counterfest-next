@@ -5,16 +5,16 @@
 			{
 				"slug": "speedstars",
 				"status": "accepting",
-				"percentage": "10",
-				"duration": "09:32",
-				"finished_tracks": "2",
+				"percentage": "60",
+				"duration": "33:07",
+				"finished_tracks": "8",
 				"deadline": "2025-07-31T23:59:59Z",
 				"mastering": {
 					"status": "pending",
-					"engineer": "???"
+					"engineer": "malicent (Cursed Monastery / Sigillum Azoetia)"
 				},
 				"artwork_comission": "pending",
-				"color": "#ff5733"
+				"color": "#f6c104"
 			},
 			{
 				"slug": "vanilla-parfait",

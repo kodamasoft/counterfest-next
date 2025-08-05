@@ -42,4 +42,15 @@
         "vgmdb": "https://vgmdb.net/album/137464",
         "bandcamp": "https://kodamasounds.bandcamp.com/album/midnight-syndrome-a-grasshopper-manufacture-tribute-album"
     }
+    ,
+	"speedstars": {
+        "id": "CFRC-0001",
+        "releaseDate": "2024-08-11T00:00:00+0200",
+        "name": "MIDNIGHT SYNDROME -a Grasshopper Manufacture tribute album-",
+        "cover": "/assets/discography/covers/0015.png",
+        "coverColor": "#000000",
+        "website": "https://kodamasoft.net/releases/midnight-syndrome",
+        "vgmdb": "https://vgmdb.net/album/137464",
+        "bandcamp": "https://kodamasounds.bandcamp.com/album/midnight-syndrome-a-grasshopper-manufacture-tribute-album"
+    }
 }

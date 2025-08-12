@@ -70,16 +70,16 @@
 			},
 			{
 				"slug": "speedstars",
-				"status": "accepting",
-				"percentage": "60",
-				"duration": "33:07",
-				"finished_tracks": "8",
+				"status": "completed",
+				"percentage": "100",
+				"duration": "1:00:41",
+				"finished_tracks": "15",
 				"mastering": {
 					"status": "pending",
 					"engineer": "malicent (Cursed Monastery / Sigillum Azoetia)"
 				},
 				"artwork_comission": "pending",
-				"color": "#f6c104"
+				"color": "#ff5733"
 			}
 		]
 	}

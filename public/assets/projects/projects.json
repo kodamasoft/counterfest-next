@@ -3,19 +3,6 @@
 		"cat_slug": "tribute-albums",
 		"projects": [
 			{
-				"slug": "speedstars",
-				"status": "accepting",
-				"percentage": "60",
-				"duration": "33:07",
-				"finished_tracks": "8",
-				"mastering": {
-					"status": "pending",
-					"engineer": "malicent (Cursed Monastery / Sigillum Azoetia)"
-				},
-				"artwork_comission": "pending",
-				"color": "#f6c104"
-			},
-			{
 				"slug": "vanilla-parfait",
 				"status": "accepting",
 				"percentage": "0",
@@ -28,19 +15,6 @@
 				},
 				"artwork_comission": "pending",
 				"color": "#ceab82"
-			},
-			{
-				"slug": "midnight-syndrome-2",
-				"status": "accepting",
-				"percentage": "0",
-				"duration": "00:00",
-				"finished_tracks": "0",
-				"mastering": {
-					"status": "pending",
-					"engineer": "???"
-				},
-				"artwork_comission": "pending",
-				"color": "#e94242"
 			},
 			{
 				"slug": "moonstruck-analogy-ii",
@@ -80,6 +54,32 @@
 				},
 				"artwork_comission": "pending",
 				"color": "#f472b6"
+			},
+			{
+				"slug": "midnight-syndrome-2",
+				"status": "accepting",
+				"percentage": "0",
+				"duration": "00:00",
+				"finished_tracks": "0",
+				"mastering": {
+					"status": "pending",
+					"engineer": "???"
+				},
+				"artwork_comission": "pending",
+				"color": "#e94242"
+			},
+			{
+				"slug": "speedstars",
+				"status": "accepting",
+				"percentage": "60",
+				"duration": "33:07",
+				"finished_tracks": "8",
+				"mastering": {
+					"status": "pending",
+					"engineer": "malicent (Cursed Monastery / Sigillum Azoetia)"
+				},
+				"artwork_comission": "pending",
+				"color": "#f6c104"
 			}
 		]
 	}

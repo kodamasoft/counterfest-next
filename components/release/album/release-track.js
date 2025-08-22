@@ -2,7 +2,6 @@ import { Disclosure, Transition } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 
 import trackStyles from './release-track.module.scss'
-import { useRouter } from 'next/router'
 
 
 export default function ReleaseTrack({ track, key }) {

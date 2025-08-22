@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 import collaboratorsJson from '/_collaborators.json'
 import {
@@ -16,6 +15,7 @@ import PixivSVG from '../../../public/assets/icons/pixiv.svg'
 import FanboxSVG from '../../../public/assets/icons/fanbox.svg'
 import VgmdbSVG from '../../../public/assets/icons/vgmdb.svg'
 import BskySVG from '../../../public/assets/icons/bsky.svg'
+import { collaboratorsJson } from '/_collaborators.json';
 
 export default function ReleaseTracklist({ credits }) {
 	function LinkIcon(props) {

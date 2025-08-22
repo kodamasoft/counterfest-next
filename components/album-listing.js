@@ -10,9 +10,8 @@ import { getDictionary } from "@/app/[lang]/dictionaries";
 import DateFormatter from './date-formatter'
 import {use} from 'react'
 
-export default async function AlbumListing({ slug, params }) {
+export default async function AlbumListing({ slug, lang }) {
     let album = {};
-    const { lang } = await params;
     const dict = await getDictionary(lang);
 
     // if we find an album with the key equal as the slug we are looking for, return the album

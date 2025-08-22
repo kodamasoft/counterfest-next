@@ -8,6 +8,7 @@ import ProseContainer from '@/components/prose-container';
 
 export default async function Faq({params}) {
 	const { lang } = await params;
+	console.log('lang', lang);
 	const FaqMDX = dynamic(() => import(`@/markdown/faq.${lang}.mdx`));
 	return (
 		<Container>

@@ -11,7 +11,7 @@ export default async function Header({params}) {
 	const { lang } = await params;
 	let links = [
 		{ href: `/${lang}/`, label: 'Home' },
-		//{ href: `/${lang}/discography`, label: 'Discography' },
+		{ href: `/${lang}/discography`, label: 'Discography' },
 		{ href: `/${lang}/projects`, label: 'Projects' },
 		//{ href: `/${lang}/staff`, label: 'Staff' },
 		{ href: 'https://kodamasoft.net', label: 'KodamaSoft' },
